@@ -1,0 +1,9 @@
+Big - O Guide
+
+Calculation not Dependent on input size - 0(1)
+
+1. loop - O(n);
+
+2. Nested Loops - O(n ^ 2)
+
+3. Input size Reduced by Half - O(logn) 
