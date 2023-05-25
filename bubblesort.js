@@ -22,3 +22,5 @@ function BublleSort(arr) {
 const arr = [3, 5, -5, 9, -2, 7, -8, 4, -1]
 BublleSort(arr)
 console.log(arr) // final output [- 8, -5, -2, -1, 3,4, 5, 7, 9]
+
+//Big-O = 0(n`2)
