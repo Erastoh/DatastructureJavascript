@@ -1,0 +1,6 @@
+GIT
+
+git is a code version Control system. 
+
+Command Line tools
+git --version      // Used to check what version of git is installed
