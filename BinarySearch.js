@@ -28,7 +28,7 @@ function BinarySearch(arr, target) {
 
 //Big o === O(logn)  because input size is reduced by half
 
-console.log(BinarySearch([-3, 2, 3, 5, 6, 7, 8, 9], 6))
-console.log(BinarySearch([-2, 3, 5, 6, 7, 8, 9], 5))
-console.log(BinarySearch([-2, 3, 5, 6, 7, 8], 8))
+console.log(BinarySearch([-3, 2, 3, 5, 6, 7, 8, 9], 6)) //index 4
+console.log(BinarySearch([-2, 3, 5, 6, 7, 8, 9], 5)) // index 2
+console.log(BinarySearch([-2, 3, 5, 6, 7, 8], 8)) // index 5
 

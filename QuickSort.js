@@ -25,4 +25,4 @@ const arr = [8, 20, -2, -6, 4]
 console.log(QuickSort(arr)) // [ -6, -2, 4, 8, 20 ]
 
 // Worst Case Complexity --- O(n~2)   when we have a sorted algorith
-//Average Case Complexity -- O(n log n)
+// Average Case Complexity -- O(n log n)

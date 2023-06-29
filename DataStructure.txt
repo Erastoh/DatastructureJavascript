@@ -1,0 +1,2 @@
+What is DataStructure 
+- It is a way of storing and Organizing data so that it can be used effectively. 
