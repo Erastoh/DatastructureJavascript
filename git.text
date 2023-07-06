@@ -4,3 +4,9 @@ git is a code version Control system.
 
 Command Line tools
 git --version      // Used to check what version of git is installed
+
+git config --global user.name "w3schools-test"
+git config --global user.email "test@w3schools.com" // commands to config your account name and email. 
+git init  - used to Initialize empty Git repository
+
+mkdir - command to 
