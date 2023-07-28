@@ -10,8 +10,9 @@
 // size() - get the number of elements in the stack
 
 // Solution
+
 class Stack {
-	constructur() {
+	constructor () {
 		this.items = []
 	}
 
@@ -19,7 +20,7 @@ class Stack {
 		this.items.push(element)
 	}
 
-	pop() {
+	pop(element) {
 		return this.items.pop(element)
 	}
 
@@ -45,9 +46,10 @@ const stack = new Stack()
 stack.push(20)
 stack.push(10)
 stack.push(30)
-console.log(stack.zize())
-stack.print()
+console.log(stack.size()) //3
+stack.print() // 20,10,30
 
-console.log(stack.pop())
-console.log(stack.peek())
+console.log(stack.pop()) // 30 last in and first out
+console.log(stack.peek()) // 10
+stack.print()  //20,10 
  
