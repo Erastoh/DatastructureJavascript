@@ -90,8 +90,8 @@ que.enqueue(50)
 console.log(que.isfull()) // prints true
 que.print() // will print the whole items inside the list of data
 console.log(que.dequeue()) //10 - remove the first element on the que
-console.log(que.peek()) // 10 is in the front of the que.
-que.print()
+console.log(que.peek()) // will print the front item that is 20 after we removed 10 is in the front of the que.
+que.print() // 
 que.enqueue(60)
 que.print() 
 
