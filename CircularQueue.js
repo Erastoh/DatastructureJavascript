@@ -87,13 +87,13 @@ que.enqueue(20)
 que.enqueue(30)
 que.enqueue(40)
 que.enqueue(50)
-console.log(que.isfull())
-que.print()
+console.log(que.isfull()) // prints true
+que.print() 
 console.log(que.dequeue()) //10 - remove the first element on the que
 console.log(que.peek()) // 10 is in the front of the que.
 que.print()
 que.enqueue(60)
-que.print()
+que.print() 
 
 
 
