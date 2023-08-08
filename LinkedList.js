@@ -10,6 +10,7 @@
 
 
 
+
 class Node {
 	constructor (value) {
 		this.value = value
@@ -21,10 +22,17 @@ class Node {
 class LinkedList {
 	constructor (value) {
 		this.head = null
-		this.size = o //to track the number of nodes
+		this.size = 0 //to track the number of nodes
 	}
 
 	isEmpty() {
 		return this.size === 0
 	}
+
+	getSize() {
+		return this.size
+	}
 }
+const list = new LinkedList
+console.log('List is empty: ', list.isEmpty()) // List is empty:  true
+console.log('List is Size: ', list.getSize()) //  List is Size:  0
