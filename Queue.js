@@ -1,7 +1,7 @@
 //Queue
 // The queue DataStructure is a sequential collection of elements that follow the Principal of First In First Out(FIFO) where the first element in will be the first element to go out. 
 
-// It's an abstract data type, it is defined by its behaviour rather thab being a mathematical model
+// It's an abstract data type, it is defined by its behaviour rather than being a mathematical model
 
  // supports 2 Main Operations
   // Enqueue - add the element to the rear/tail of the collection
@@ -108,4 +108,11 @@ console.log(que2.peek())  // 10 is in the front of the que.
 
 
 
+// What is Complexity Analysis of Queue operations ? Related To: Data Structures
+// 
+// Answer
+// Queues offer random access to their contents by shifting the first element off the front of the queue.You have to do this repeatedly to access an arbitrary element somewhere in the queue.Therefore, access is O(n).
+// Searching for a given value in the queue requires iterating until you find it.So search is O(n).
+// Inserting into a queue, by definition, can only happen at the back of the queue, similar to someone getting in line for a delicious Double - Double burger at In 'n Out. Assuming an efficient queue implementation, queue insertion is O(1).
+// Deleting from a queue happens at the front of the queue.Assuming an efficient queue implementation, queue deletion is `O(1).
 
