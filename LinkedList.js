@@ -32,6 +32,10 @@ class LinkedList {
 	getSize() {
 		return this.size
 	}
+
+	prepend(value) {
+		const node = new Node(value)
+	}
 }
 const list = new LinkedList
 console.log('List is empty: ', list.isEmpty()) // List is empty:  true
