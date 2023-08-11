@@ -44,17 +44,27 @@ class LinkedList {
 		this.size++
 	}
 
+
 	print() {
 		if (this.isEmpty()) {
 			console.log('List is empty: ')
 		} else {
-
+			let curr = this.head
+			let listlength = ''
+			while (curr) {
+				listlength += `${curr.value} `
+				curr = curr.next
+			}
+			console.log('List Length:', listlength)
 		}
 	}
 }
 const list = new LinkedList
 console.log('List is empty: ', list.isEmpty()) // List is empty:  true
 console.log('List is Size: ', list.getSize()) //  List is Size:  0
+list.print()
 list.prepend(10)
 list.prepend(20)
-list.prepend(20)
+list.prepend(30)
+
+list.print()
