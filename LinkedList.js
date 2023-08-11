@@ -35,6 +35,9 @@ class LinkedList {
 
 	prepend(value) {
 		const node = new Node(value)
+		if (this.isEmpty()) {
+			this.head = node
+		}
 	}
 }
 const list = new LinkedList
