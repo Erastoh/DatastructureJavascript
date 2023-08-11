@@ -37,7 +37,11 @@ class LinkedList {
 		const node = new Node(value)
 		if (this.isEmpty()) {
 			this.head = node
+		} else {
+			this.node = this.head
+			this.head = node
 		}
+		this.size++
 	}
 }
 const list = new LinkedList
