@@ -45,9 +45,15 @@ class LinkedList {
 	}
 
 	append(value) {
-		const node = new Node()
+		const node = new Node(value)
 		if (this.isEmpty()) {
 			this.head = node
+		} else {
+			let prev = this.head
+			while (prev.next) {
+				prev = prev.next
+			}
+			prev.next = node
 		}
 		this.size++
 	}
