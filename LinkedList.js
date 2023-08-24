@@ -38,7 +38,7 @@ class LinkedList {
 		if (this.isEmpty()) {
 			this.head = node
 		} else {
-			this.node = this.head
+			node.next = this.head
 			this.head = node
 		}
 		this.size++
