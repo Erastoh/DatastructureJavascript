@@ -32,7 +32,7 @@ class LinkedList {
 	getSize() {
 		return this.size
 	}
-
+// Prepend has a constant time complexity 0(1) because it does not depend on how many items are there in the list
 	prepend(value) {
 		const node = new Node(value)
 		if (this.isEmpty()) {
@@ -43,7 +43,7 @@ class LinkedList {
 		}
 		this.size++
 	}
-
+//Append had a liniear time complexity 0(n) because it depends on the list of items in the node
 	append(value) {
 		const node = new Node(value)
 		if (this.isEmpty()) {
@@ -81,10 +81,13 @@ list.prepend(10)
 list.prepend(20)
 list.prepend(30)
 list.prepend(40)
-list.prepend(50)
-list.prepend(60)
-list.prepend(70)
 list.prepend(80)
 list.prepend(90)
 list.prepend(100)
-list.print()
+list.print() // will print 10 20 30 40 80 90 100
+
+list.append(50)
+list.append(60)
+list.append(70)
+list.print() // will print 50 60 70 
+// full list printed 10 20 30 40 80 90 100 50 60 70 
