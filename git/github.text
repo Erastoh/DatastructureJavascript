@@ -1,0 +1,4 @@
+Configure Git
+git config --global user.name "Erastoh"
+git config --global user.email "erastudmugambi@gmail.com"
+
