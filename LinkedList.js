@@ -43,6 +43,15 @@ class LinkedList {
 		}
 		this.size++
 	}
+
+	//Insert an item on a linked list
+
+	insert(value, index) {
+		if (value < 0 || index > this.size) {
+			return
+		}
+	}
+
 //Append had a liniear time complexity 0(n) because it depends on the list of items in the node
 	append(value) {
 		const node = new Node(value)
