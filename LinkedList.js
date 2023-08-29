@@ -57,7 +57,7 @@ class LinkedList {
 			this.prepend(value)
 		} else {
 			//adding when
-			const node = new Node()
+			const node = new Node(value)
 			let prev = this.head
 			for (let i = 0; i < index.lenght; i++) {
 				prev = prev.next
