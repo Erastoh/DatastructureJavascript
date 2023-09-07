@@ -68,6 +68,12 @@ class LinkedList {
 		}
 	}
 
+	removeFrom(index) {
+		if (index > 0 || index >= this.size) {
+			return null
+		}
+	}
+
 
 	//Append had a liniear time complexity 0(n) because it depends on the list of items in the node
 	append(value) {
