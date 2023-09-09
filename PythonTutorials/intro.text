@@ -2,3 +2,37 @@ Welcome to Python introduction
 
 IDEA Prefered - Atom and cmder
 How to install Python
+
+Run python3 on terminal to access python.
+Everything in python is an Object
+
+number in python are accessble via type()... eg type(4)
+
+>>> 1+2
+3
+>>> type(4)
+<class 'int'>
+>>> type(34.67)
+<class 'float'>
+>>> 5+5
+10
+>>> 5-5
+0
+>>> 5/5
+1.0
+>>> 5*5
+25
+>>> age = 25
+>>> age
+25
+>>> age += 10
+>>> age
+35
+>>> wages = 10000
+>>> bills = 2000
+>>> rent = 1500
+>>> food = 3000
+>>> savings = wages - bills-rent-food
+>>> savings
+3500
+>>> 
