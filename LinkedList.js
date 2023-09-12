@@ -98,6 +98,30 @@ class LinkedList {
 		this.size--
 		return removedNode.value
 	}
+//removing a value From Linked list
+	removeValue(value) {
+		if (this.isEmpty()) {
+			return null
+		}
+		if (this.head.value === value) {
+			this.head = this.head.next
+			this.size--
+			return value
+		} else {
+			let prev = this.head
+			while (prev.next && prev.next.value !== value) {
+				prev = prev.next
+			}
+			if (prev.next) {
+				const removedNode = prev.next
+				prev.next = removedNode.next
+				this.size--
+				return value
+			}
+			return null
+		}
+	}
+
 
 
 
@@ -138,6 +162,9 @@ list.print()
 console.log('List is remove: ', list.removeFrom(2))
 list.print()
 list.print(list.getSize())
+
+console.log('List is remove by value: ', list.removeValue(50)) // 30 20 80 60 70 
+list.print()
 
 
 
