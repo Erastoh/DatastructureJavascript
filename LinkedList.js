@@ -98,7 +98,7 @@ class LinkedList {
 		this.size--
 		return removedNode.value
 	}
-//removing a value From Linked list
+//removing a value From Linked list// ---- has a linear time complexity. 
 	removeValue(value) {
 		if (this.isEmpty()) {
 			return null
@@ -122,8 +122,21 @@ class LinkedList {
 		}
 	}
 
-
-
+	search(value) {
+		if (this.isEmpty()) {
+			return -1
+		}
+		let i = 0
+		let curr = this.head
+		while (curr) {
+			if (curr.value === value) {
+				return i
+			}
+			curr = curr.next
+			i++
+		}
+		return -1
+	}
 
 	print() {
 		if (this.isEmpty()) {
@@ -164,6 +177,9 @@ list.print()
 list.print(list.getSize())
 
 console.log('List is remove by value: ', list.removeValue(50)) // 30 20 80 60 70 
+list.print()
+
+console.log('List is Search: ', list.search(70)) // 4
 list.print()
 
 
