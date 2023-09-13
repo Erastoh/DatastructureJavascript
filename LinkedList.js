@@ -138,6 +138,22 @@ class LinkedList {
 		return -1
 	}
 
+	reverse() {
+		let prev = null
+		let curr = this.head
+		while (curr) {
+			let next = curr.next
+			console.log('List is next: ', next)
+			curr.next = prev
+			console.log('List is curr next: ', curr.next)
+			prev = curr
+			console.log('List is prev: ', prev)
+			curr = next
+			console.log('List is curr: ', curr)
+		}
+		this.head = prev
+	}
+
 	print() {
 		if (this.isEmpty()) {
 			console.log('List is empty: ')
