@@ -36,6 +36,15 @@ class LinkedList {
 	}
 
 	prepend(value) {
+		const node = new Node()
+		if (this.isEmpty()) {
+			this.head = node
+			this.tail = node
+		} else {
+			node.next = this.head
+			this.head = node
+		}
+		this.size++
 
 	}
 
