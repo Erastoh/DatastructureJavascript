@@ -36,7 +36,7 @@ class LinkedList {
 	}
 
 	prepend(value) {
-		const node = new Node()
+		const node = new Node(value)
 		if (this.isEmpty()) {
 			this.head = node
 			this.tail = node
@@ -49,7 +49,15 @@ class LinkedList {
 	}
 
 	append(value) {
-
+		const node = new Node(value)
+		if (this.isEmpty()) {
+			this.head = node
+			this.tail = node
+		} else {
+			node.next = this.tail
+			this.tail = node
+		}
+		this.size++
 	}
 
 	removeFromFront() {
