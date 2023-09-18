@@ -1,0 +1,8 @@
+// Swift Programming Language
+
+QUESTIONS
+1. What is the difference between a Class and a Struct in Swift
+Classes: Classes are reference types. When you create an instance of a class and assign it to a new variable or pass it as a parameter, you are working with a reference to the same instance in memory. If you modify the instance through one reference, the changes are reflected in all references to that instance.
+Structs: Structs are value types. When you create an instance of a struct and assign it to a new variable or pass it as a parameter, you are working with a copy of the instance's data. Modifications to the instance do not affect other copies of the struct.
+
+2. 
