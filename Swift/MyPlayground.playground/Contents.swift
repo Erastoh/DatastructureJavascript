@@ -56,6 +56,61 @@ var Subaru2 = Honda2 //Subaru2 | Honda2 , is not dependent on.
 
 //Loops
 
+let numbers = [1,2,3,4,5,6,7]
+//for loop
+for thing in numbers{
+    let result = thing * 2
+//    print(thing)
+    print(result)
+}
+
+//while loop
+var valuex = 0
+while valuex < 3{
+    valuex += 1
+    print(valuex)
+}
+
+
+//Optionals and UnWrapping
+
+//Optionals
+
+var optionx:Int? = 3 // optionx might be nill, its optional
+var optionz:Int? = 9
+//var resultoption = optionx+ optionz -- won't work, so we have to Unwrapp the values to be usable
+
+//UnWrapping to ensure none of the Values is Null.
+if let valueXoption = optionx{
+    if let valueZoption = optionz{
+        var resultoption = valueXoption + valueZoption
+        print(resultoption)
+    }
+}
+
+
+var price: Double? = nil
+print(price)//nil
+price = 1.34
+print(price) //nil Optional(1.34)
+
+type(of: price) //Optional<Double>
+
+//Conditional Operators
+
+var condx = 12
+
+if condx > 10{
+    
+}else if condx > 20{
+    
+}else{
+    
+}
+
+
+
+
 
 
 
