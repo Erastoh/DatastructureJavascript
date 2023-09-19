@@ -108,6 +108,33 @@ if condx > 10{
     
 }
 
+//Guard Statements
+//guard ensures that a statement is true
+func numberLargerThanFive(guardnumber: Int) -> Bool {
+    guard guardnumber > 5 else{
+        return false
+    }
+    return true
+}
+numberLargerThanFive(guardnumber: 2)
+
+var StringGuard: String?
+//StringGuard = "hello people"
+
+if let StringGuardCheck = StringGuard{
+    
+}
+
+func printValues(){
+    guard let guardNumber = StringGuard else {return}
+    print(guardNumber)
+}
+printValues()
+
+
+
+
+
 
 
 
