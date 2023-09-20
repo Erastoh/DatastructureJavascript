@@ -187,6 +187,30 @@ class BMWcar:CarNew , CarProto{
     
 }
 
+//Strong and Weak Memory
+//Most variable are created as strong and if you want to define a variable as week you assign wek on IteratorProtocol
+//weak var String = "name"
+
+//Closures / Lambda
+
+var MyFunction: ((Int) -> Bool) = {
+    number in
+    if number > 3{
+        return true
+    }
+    return false
+}
+MyFunction(4)
+
+func numberGreaterThan(number: Int)-> Bool{
+    if number > 3{
+        return true
+    }
+    return false
+}
+numberGreaterThan(number: 1)
+                                            
+
 
 
 
