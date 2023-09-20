@@ -1,5 +1,5 @@
 import Foundation
-
+import UIKit
 //function and Parameters
 func addTwoNumbers(a:Int, b:Int) ->Int{
     return a+b
@@ -239,6 +239,19 @@ for (key, value) in carsDict{
 }
 
 //Int, Float and Doubles
+var a:Int = 1    //int
+var b:Double = 1.00 // double
+var c:Float = 1.000000 // Float
+//to convert use
+var addeach = Double(a) + b
+
+//Frameworks and Libraries in Swift.
+//imported UIKit
+let button = UIButton()
+
+//Naming Convensions
+var number_of_day_in_year = ""
+var numberofdayinyear = ""
 
 
 
