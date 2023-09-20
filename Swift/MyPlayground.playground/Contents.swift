@@ -131,6 +131,29 @@ func printValues(){
 }
 printValues()
 
+//Enums and Switch Statements
+//Enums is a way to represent multiple states
+enum States{
+    case onprogress
+    case onstart
+    case onclosed
+}
+//to access the values
+let current = States.onstart
+
+//Switches
+func checkStates(){
+    switch current{
+    case .onprogress:
+        break
+    case .onstart:
+        print("onStart Here")
+        break
+    case .onclosed:
+        break
+    }
+}
+checkStates()
 
 
 
