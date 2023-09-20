@@ -153,7 +153,39 @@ func checkStates(){
         break
     }
 }
+
 checkStates()
+
+//Protocols
+//a protocol is a blueprint or a set of rules that define a set of methods and properties. It provides a way to define a contract or an interface that classes, structures, or enumerations can adopt and conform to.
+
+protocol CarProto{
+    var color: String {get set}
+    func Drive()
+    func isAllWheelDriver() -> Bool
+    
+}
+
+class CarNew{
+    
+}
+
+class BMWcar:CarNew , CarProto{
+    var color: String
+    init(color:String) {
+        self.color = color
+    }
+    
+    func Drive() {
+        
+    }
+    
+    func isAllWheelDriver() -> Bool {
+        return true
+    }
+    
+    
+}
 
 
 
