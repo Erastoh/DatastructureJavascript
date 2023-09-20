@@ -209,10 +209,36 @@ func numberGreaterThan(number: Int)-> Bool{
     return false
 }
 numberGreaterThan(number: 1)
-                                            
 
+// Strings
+var Erastus: String = "Erastus"
 
+var firstname = "Eras"
+var secondname = "Muga"
 
+var fullname = "My name is \(firstname) \(secondname)"
+print(fullname)
+
+//Arrays and Dictionaries
+var IntNames: [Int] = [1,2,3,4]
+var StringNames: [String] = ["name1","name2","name3","name4"]
+var AnyNames: [Any] = [1,2,3,4, "name1","name2","name3","name4"]
+
+for valuesinarray in AnyNames{
+    print(valuesinarray)
+}
+
+//Dictionaries is similar to maps
+var carsDict : [String: Int] = ["name": 1, "name2": 2, "name3":3]
+
+for carsDictVal in carsDict{
+    print(carsDictVal)
+}
+for (key, value) in carsDict{
+    print(value)
+}
+
+//Int, Float and Doubles
 
 
 
