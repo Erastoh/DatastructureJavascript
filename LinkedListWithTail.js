@@ -76,6 +76,7 @@ class LinkedList {
 
 
 }
+module.exports = LinkedList
 const list = new LinkedList
 console.log('List is empty: ', list.isEmpty()) // List is empty:  true
 console.log('List is Size: ', list.getSize()) //  List is Size:  0

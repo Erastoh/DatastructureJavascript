@@ -253,6 +253,8 @@ let button = UIButton()
 var number_of_day_in_year = ""
 var numberofdayinyear = ""
 
+//Type Aliases
+
 
 
 
