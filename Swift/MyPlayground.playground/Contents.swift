@@ -83,14 +83,14 @@ var optionz:Int? = 9
 //UnWrapping to ensure none of the Values is Null.
 if let valueXoption = optionx{
     if let valueZoption = optionz{
-        var resultoption = valueXoption + valueZoption
+        let resultoption = valueXoption + valueZoption
         print(resultoption)
     }
 }
 
 
 var price: Double? = nil
-print(price)//nil
+//print(price)//nil
 price = 1.34
 print(price) //nil Optional(1.34)
 
@@ -254,11 +254,71 @@ var number_of_day_in_year = ""
 var numberofdayinyear = ""
 
 //Type Aliases
+//a type alias is a way to give an existing data type a new, more descriptive name.
+//Type aliases do not create new types but provide an alternative name for an existing type.
 
+typealias promoCodeValidationFunc = ((String) ->(Bool))?
+//var ValidateFunction = promoCodeValidationFunc
 
+//Ternary Operator
+func ReturnTernaryStatement(number: Int) -> Bool{
+    return number > 5 ? true : false
+}
 
+//Math Functions
+//Recursion - it is a technique where by a function call itself in order to solve a problem
 
+func add(x: Int, y:Int) ->Int{
+    var result = x+y
+    add(x:result, y:1)
+    return 0
+}
 
+//Searching and Sorting
+var numberSearch = [1,12,3,34,35,56,7,68,9,10]
+func isNumberInArray(number:Int, array:[Int]) -> Bool{
+    for x in array{
+        if x == number{
+            return true
+        }
+    }
+    
+    return false
+}
+isNumberInArray(number:12, array:numberSearch)
+
+//Summary
+protocol AddressDataSource{
+    func myAddress() -> String
+}
+class Neighborhood{
+    let homes: [Home] = []
+}
+
+class Home: AddressDataSource{
+    let rooms: [Room] = []
+    
+    func myAddress() -> String{
+        return "Saitoti Road, Kitengela"
+    }
+}
+
+class Room{
+    var color = "Blue"
+    let RoomWidth = 12
+    let RoomLength = 32.5
+    let RoomArea: Int? = RoomWidth * Int(RoomLength)
+    func getArea() -> Int{
+        guard let areaValue = RoomArea else{
+            return
+        }
+        return areaValue
+    }
+    
+    func isOnSecondFloor() -> Bool{
+        return false
+    }
+}
 
 
 
