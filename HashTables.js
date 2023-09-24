@@ -5,7 +5,6 @@
 // - Get to retrieve a value given it's key
 // - Remove to delete a key value pair
 // - Hashing Function to Convert a string key to a numeric index which is important to store data in array
-
 class HashTable {
 	constructor (size) {
 		this.table = Array(size)
@@ -21,17 +20,44 @@ class HashTable {
 	}
 	set(key, value) {
 		const index = this.hash(key)
-		this.table[index] = value
+		// this.table[index] = value
+		const bucket = this.table[index]
+		if (!bucket) {
+			this.table[index] = [[key, value]]
+		} else {
+			const sameKeyValue = bucket.find(item => item[0] === key)
+			if (sameKeyValue) {
+				sameKeyValue[1] = value
+			} else {
+				bucket.push([key, value])
+			}
+		}
 	}
 
 	get(key) {
 		const index = this.hash(key)
-		return this.table[index]
+		// return this.table[index]
+
+		const bucket = this.table[index]
+		if (bucket) {
+			const sameKeyValue = bucket.find(item => item[0] === key)
+			if (sameKeyValue) {
+				return sameKeyValue[1]
+			}
+		}
+		return undefined
 	}
 
 	remove(key) {
 		const index = this.hash(key)
-		this.table[index] = undefined
+		// this.table[index] = undefined
+		const bucket = this.table[index]
+		if (bucket) {
+			const sameKeyValue = bucket.find(item => item[0] === key)
+			if (sameKeyValue) {
+				bucket.slice(bucket.indexOf(sameKeyValue), 1)
+			}
+		}
 	}
 
 	display() {
@@ -46,9 +72,9 @@ class HashTable {
 const tablehash = new HashTable(50)
 tablehash.set("Name", "Eras")
 tablehash.set("Age", 26)
-// tablehash.set("Work", "Moovn")
+tablehash.set("Work", "Moovn")
 tablehash.display()
 
-// console.log(tablehash.get("Name"))
-// tablehash.remove("Work")
-// tablehash.display()
+console.log(tablehash.get("Name"))
+tablehash.remove("Work")
+tablehash.display()
