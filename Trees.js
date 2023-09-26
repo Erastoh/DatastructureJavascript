@@ -57,6 +57,18 @@ class BinarySearchTree {
 		}
 	}
 
+	// PreOrder Traversal
+	//Depth First Search
+	preorder(root) {
+		if (root) {
+			console.log(root.value)
+			this.preorder(root.left)
+			this.preorder(root.right)
+		}
+	}
+
+  //InOrder Traversal
+
 }
 
 const bst = new BinarySearchTree()
@@ -69,3 +81,5 @@ bst.insert(15)
 console.log("Binary Search,", bst.search(bst.root, 10))
 console.log("Binary Search,", bst.search(bst.root, 5))
 console.log("Binary Search,", bst.search(bst.root, 15))
+bst.preorder(bst.root)
+//Tree Traversal
