@@ -79,10 +79,21 @@ class BinarySearchTree {
 			console.log(root.value)
 		}
 	}
-
-
-
-	//InOrder Traversal
+	//Breath First Search
+	LevelOrder() {
+		const queue = []
+		queue.push(this.root)
+		while (queue.length) {
+			let curr = queue.shift()
+			console.log(curr.value)
+			if (curr.left) {
+				queue.push(curr.left)
+			}
+			if (curr.right) {
+				queue.push(curr.right)
+			}
+		}
+	}
 }
 
 const bst = new BinarySearchTree()
@@ -97,8 +108,11 @@ bst.insert(7)
 console.log("Binary Search,", bst.search(bst.root, 10))
 console.log("Binary Search,", bst.search(bst.root, 5))
 console.log("Binary Search,", bst.search(bst.root, 15))
-bst.preorder(bst.root)
+bst.preorder(bst.root) // 10, 5, 3, 7, 15
 console.log("InOrder Search")
-bst.inOrder(bst.root)
+bst.inOrder(bst.root) // 3,5,7,10,15
 console.log("PostOrder Search")
-bst.postOrder(bst.root)
+bst.postOrder(bst.root) // 3, 7, 5, 15, 10
+console.log("Breadth First Search")
+bst.LevelOrder() //Breadth First Search - 10, 5, 15, 3, 7
+
