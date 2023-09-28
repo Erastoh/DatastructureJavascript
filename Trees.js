@@ -111,12 +111,31 @@ class BinarySearchTree {
 		}
 	}
 
-	delete() {
+	delete(value) {
 		this.root = this.deleteNode(this.root, value)
 	}
 
 	deleteNode(root, value) {
-
+		if (root === null) {
+			return root
+		}
+		if (value < root.value) {
+			root.left = this.deleteNode(root.left, value)
+		} else if (value > root.value) {
+			root.right = this.deleteNode(root.left, value)
+		} else {
+			if (!root.left && !root.right) {
+				return null
+			}
+			if (!root.left) {
+				return root.right
+			} else if (!root.right) {
+				return root.left
+			}
+			root.value = this.min(root.left)
+			root.right = this.deleteNode(root.right, root.value)
+		}
+		return root
 	}
 }
 
@@ -139,7 +158,11 @@ console.log("PostOrder Search")
 bst.postOrder(bst.root) // 3, 7, 5, 15, 10
 console.log("Breadth First Search")
 bst.LevelOrder() //Breadth First Search - 10, 5, 15, 3, 7
+console.log("Delete==============")
+bst.delete(3) //10, 5, 15, 7
+bst.LevelOrder()
 console.log("Min Value", bst.min(bst.root)) // 3
+
 console.log("Max Value", bst.max(bst.root)) // 15
 
 
