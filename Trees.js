@@ -110,6 +110,14 @@ class BinarySearchTree {
 			return this.max(root.right)
 		}
 	}
+
+	delete() {
+		this.root = this.deleteNode(this.root, value)
+	}
+
+	deleteNode(root, value) {
+
+	}
 }
 
 const bst = new BinarySearchTree()
@@ -131,9 +139,7 @@ console.log("PostOrder Search")
 bst.postOrder(bst.root) // 3, 7, 5, 15, 10
 console.log("Breadth First Search")
 bst.LevelOrder() //Breadth First Search - 10, 5, 15, 3, 7
-
 console.log("Min Value", bst.min(bst.root)) // 3
-
 console.log("Max Value", bst.max(bst.root)) // 15
 
 
