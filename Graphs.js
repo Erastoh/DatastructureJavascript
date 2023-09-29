@@ -4,7 +4,6 @@
 //2. Undirected - has edges that are bidirectional
 //Graphs are represented by
 // i, Adjacency matrix - is a 2D array of size VxV
-
 const matrix = [
 	[0, 1, 0],
 	[1, 0, 1],
@@ -13,7 +12,14 @@ const matrix = [
 
 console.log(matrix[0][1]) // 1- because there is conection btn A and B
 
-// ii, Adjacency list - vertises are stored in a map like Data Structure and every Vertex Stores a list of it adjacent vertices
+AdjacencyList = {
+	'A': ['B'],
+	'B': ['A', 'C'],
+	'C': ['B']
+}
+
+console.log(AdjacencyList['B']) // [ 'A', 'C' ]
+
 class Graph {
 	constructor () {
 		this.adjacencyList = {}
@@ -37,6 +43,16 @@ class Graph {
 		this.adjacencyList[vertex2].add(vertex1)
 	}
 
+	hasEdge(vertex1, vertex2) {
+		return this.adjacencyList[vertex1].has(vertex2) &&
+			this.adjacencyList[vertex2].has(vertex1)
+	}
+
+	display() {
+		for (let vertex in this.adjacencyList) {
+			console.log(vertex + "->" + [...this.adjacencyList[vertex]])
+		}
+	}
 }
 
 const graph = new Graph()
@@ -45,3 +61,6 @@ graph.addVertex("B")
 graph.addVertex("C")
 graph.AddEdges("A", "B")
 graph.AddEdges("B", "C")
+graph.display()
+console.log(graph.hasEdge("A", "B")) // true
+console.log(graph.hasEdge("A", "C")) // False
