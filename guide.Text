@@ -7,3 +7,15 @@ Calculation not Dependent on input size - 0(1)
 2. Nested Loops - O(n ^ 2)
 
 3. Input size Reduced by Half - O(logn) 
+
+
+Futher Learning
+
+1. Priority queues --- Queues
+2. Circular Linked Lists --- Linked Lists
+3. AVL trees, Red Black trees and tries --- Trees
+4. Direct acyclic graphs -- Graphs
+5. Graphs Algorithms
+    - Prim's Algorithms
+	- Kruskal's Algorithms
+	- Floyd's Algorithms
