@@ -53,6 +53,21 @@ class Graph {
 			console.log(vertex + "->" + [...this.adjacencyList[vertex]])
 		}
 	}
+
+	removeEdge(vertex1, vertex2) {
+		this.adjacencyList[vertex1].delete(vertex2)
+		this.adjacencyList[vertex2].delete(vertex1)
+	}
+
+	removeVertex(vertex) {
+		if (!this.adjacencyList[vertex]) {
+			return
+		}
+		for (let adjacentVertex in this.adjacencyList[vertex]) {
+			this.removeEdge(vertex, adjacentVertex)
+		}
+		delete this.adjacencyList[vertex]
+	}
 }
 
 const graph = new Graph()
@@ -61,6 +76,11 @@ graph.addVertex("B")
 graph.addVertex("C")
 graph.AddEdges("A", "B")
 graph.AddEdges("B", "C")
-graph.display()
+graph.display() // A->B, B->A,C, C->B
 console.log(graph.hasEdge("A", "B")) // true
 console.log(graph.hasEdge("A", "C")) // False
+graph.removeEdge("A", "B")
+graph.display() //A-> , B->C, C->B
+console.log("---------------")
+graph.removeVertex("A")
+graph.display() // B->C, C->B
