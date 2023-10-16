@@ -87,7 +87,7 @@ if let valueXoption = optionx{
         print(resultoption)
     }
 }
-
+F
 
 var price: Double? = nil
 //print(price)//nil
