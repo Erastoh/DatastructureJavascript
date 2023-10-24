@@ -1,0 +1,5 @@
+var === used to define variable acrross
+
+// How to Declare Array in Kotlin
+
+val name: Array<Strings> = arrayOf("test", "test2", "test3")
