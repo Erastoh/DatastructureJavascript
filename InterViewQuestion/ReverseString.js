@@ -1,6 +1,6 @@
 const reverName = prompt("Enter the String Name") // Erastus Mugambi
 
-if (reverName === null) {
+if (reverName === null || reverName === '') {
 	console.log("Please Enter the String")
 }
 else {
