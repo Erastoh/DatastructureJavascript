@@ -42,3 +42,37 @@ if (result.length > 0) {
 // Open brackets must be closed by the same type of brackets.
 // Open brackets must be closed in the correct order.
 // Every close bracket has a corresponding open bracket of the same type.
+//question 2
+function isValid(s) {
+	const stack = [];
+	const brackets = {
+		"(": ")",
+		"{": "}",
+		"[": "]",
+	};
+
+	for (let i = 0; i < s.length; i++) {
+		const char = s[i];
+
+		if (brackets[char]) {
+			// If the character is an open bracket, push it onto the stack.
+			stack.push(char);
+		} else {
+			// If the character is a close bracket, check if it matches the top of the stack.
+			const top = stack.pop();
+			if (brackets[top] !== char) {
+				return false; // Mismatched brackets
+			}
+		}
+	}
+
+	// If the stack is empty, all brackets have been matched.
+	return stack.length === 0;
+}
+
+// Example usage:
+const input = "{[()]}";
+console.log(isValid(input)); // Output: true
+
+const input2 = "{[)(]}";
+console.log(isValid(input2)); // Output: false
