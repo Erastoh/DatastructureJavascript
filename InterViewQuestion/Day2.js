@@ -5,52 +5,103 @@
 // together the nodes of the first two lists.
 // Return the head of the merged linked list.
 
-class NodeList {
-	constructor (value, next = null) {
-		this.value = value
-		this.next = next
+// Solution 1....
+class ListNode {
+	constructor (val, next = null) {
+		this.val = val;
+		this.next = next;
 	}
 }
 
-function MergeTwoList(list1, list2) {
-	const head = new NodeList(-1)
-	let current = head
+function mergeTwoLists(list1, list2) {
+	// Create a dummy node as the head of the merged list
+	const dummyHead = new ListNode(-1);
+	let current = dummyHead;
 
+	// Iterate through the lists while there are nodes in both lists
 	while (list1 !== null && list2 !== null) {
-		if (list1 < list2) {
-			current.next = list1
-			list1 = list1.next
-
+		if (list1.val < list2.val) {
+			// Connect the current node to the smaller node in list1
+			current.next = list1;
+			list1 = list1.next; // Move to the next node in list1
 		} else {
-			current.next = list2
-			list2 = list2.next
+			// Connect the current node to the smaller node in list2
+			current.next = list2;
+			list2 = list2.next; // Move to the next node in list2
 		}
-		current = current.next
+		// Move the current pointer to the last added node
+		current = current.next;
 	}
 
+	// If there are remaining nodes in either list, connect them to the merged list
 	if (list1 !== null) {
 		current.next = list1;
 	} else {
 		current.next = list2;
 	}
 
-	return head.next;
-
+	// The merged list starts from the next node of the dummy head
+	return dummyHead.next;
 }
 
-// const list1 = new NodeList(1, new NodeList(2, new NodeList(4)));
-// const list2 = new NodeList(1, new NodeList(3, new NodeList(4)));
-const list1 = [2, 3, 5, 6]
-const list2 = [1, 3, 4, 6]
-// Merge the lists
-const mergedList = MergeTwoList(list1, list2);
+// Example usage:
+const list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+const list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
+
+const mergedList = mergeTwoLists(list1, list2);
 
 // Print the merged list
 let current = mergedList;
 while (current !== null) {
-	console.log(current.val);
+	console.log(current.val); // 1, 1, 2, 3, 4,4
 	current = current.next;
 }
+
+
+// class NodeList {
+// 	constructor (value, next = null) {
+// 		this.value = value
+// 		this.next = next
+// 	}
+// }
+
+// function MergeTwoList(list1, list2) {
+// 	let head = new NodeList(0)
+// 	let current = head
+// 	while (list1 && list2) {
+// 		if (list1.value < list2.value) {
+// 			current.next = list1
+// 			list1 = list1.next
+// 		}
+// 		else {
+// 			current.next = list2
+// 			list2 = list2.next
+// 		}
+// 		current = current.next
+// 	}
+// 	// If one of the lists has remaining nodes, just attach them to the merged list
+// 	if (list1 !== null) {
+// 		current.next = list1
+// 	} else {
+// 		current.next = list2
+// 	}
+
+// 	// return dummyHead.next
+// 	// current.next = list1 || list2
+// 	return head.next
+
+// }
+
+// // const list1 = new NodeList(1, new NodeList(2, new NodeList(4)));
+// // const list2 = new NodeList(1, new NodeList(3, new NodeList(4)));
+// const list1 = [2, 3, 5, 6]
+// const list2 = [1, 3, 4, 6]
+// // Merge the lists
+// const mergedList = MergeTwoList(list1, list2);
+// console.log(mergedList); // [ 1, 3, 4, 6, next: [ 2, 3, 5, 6 ] ]
+
+
 
 
 
