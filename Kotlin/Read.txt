@@ -8,3 +8,13 @@ val name: Array<Strings> = arrayOf("test", "test2", "test3")
 for loop
 while loops
 
+
+//ArithMetica Operations
+
+func main(){
+	var a =6
+	var b = 8
+
+	val result:Int = a+b
+	println(result) // 14
+}
