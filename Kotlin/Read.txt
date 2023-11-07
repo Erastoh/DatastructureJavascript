@@ -4,7 +4,7 @@ var === used to define variable acrross
 
 val name: Array<Strings> = arrayOf("test", "test2", "test3")
 
-//loops
+loops
 for loop
 while loops
 
@@ -17,4 +17,22 @@ func main(){
 
 	val result:Int = a+b
 	println(result) // 14
+}
+
+
+//Read,Eval, Print, Loop
+
+Type of comments
+1. Normal comments
+2. Block comments
+
+
+For Loop in Kotlin
+
+fun main(){
+	val names:Arrays<Strings> = arrayOf("jim", "Test", "TestTwo")
+
+	for(name: Strings in names){
+		println(name)
+	}
 }
