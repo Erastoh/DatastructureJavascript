@@ -36,3 +36,7 @@ fun main(){
 		println(name)
 	}
 }
+
+
+//comparison Logics
+-- 
