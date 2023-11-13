@@ -39,4 +39,14 @@ fun main(){
 
 
 //comparison Logics
--- 
+-- true && false == false
+-- true || false == true
+
+
+//While Loop in Kotlin
+func main(){
+	var i =5
+	while(i<5){
+    println(i)
+	}
+}
