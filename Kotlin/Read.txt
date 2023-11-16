@@ -44,9 +44,48 @@ fun main(){
 
 
 //While Loop in Kotlin
-func main(){
+fun main(){
 	var i =5
 	while(i<5){
     println(i)
+	i++
+	}
+
+	//do while loop
+
+	do{
+		println(i)
+	    i++
+		//continue -- will skip all codes below it
+		//Break -- will terminate the code calls
+		//Label -- calling a do while loop to end at somepoint-- 
+	} while(i< 5)
+
+	
+}
+
+Quiz
+1.	Divide number 100 with 2 and show how many times it can be divided by 2.
+
+fun main(){
+	var number = 100
+	var counter = 0
+
+	while(number > 1){
+		number/2
+		counter++
+	}
+	print(counter)
+}
+
+//IF ELSE Program
+
+fun main(){
+	for(i:int in 1..10){
+
+		if(i>3 && i<8) continue
+
+		println(i)
+
 	}
 }
