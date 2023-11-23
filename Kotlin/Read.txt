@@ -112,4 +112,12 @@ fun main(){
 	}else{
 		println("Good Day")
 	}
+
+
+	when(time){
+		in 0..11 -> println("Good Morning")
+		12 -> println("Good Morning")
+		else -> println("Good day")
+
+	}
 }
