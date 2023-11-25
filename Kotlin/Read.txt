@@ -117,7 +117,14 @@ fun main(){
 	when(time){
 		in 0..11 -> println("Good Morning")
 		12 -> println("Good Morning")
-		else -> println("Good day")
+		else -> println("Good day!")
+
+	}
+
+		when(time){
+		in 0..11 -> println("Good Morning")
+		12 -> println("Good Morning")
+		else -> println("Good day!")
 
 	}
 }
