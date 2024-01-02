@@ -103,6 +103,61 @@ while (current !== null) {
 
 
 
+class ListNode {
+	constructor (val, next = null) {
+		this.val = val;
+		this.next = next;
+	}
+}
+
+
+function mergeTwoLists(list1, list2) {
+	// Create a dummy node as the head of the merged list
+	const dummyHead = new ListNode(-1);
+	let current = dummyHead;
+
+	// Iterate through the lists while there are nodes in both lists
+	while (list1 !== null && list2 !== null) {
+		if (list1.val < list2.val) {
+			// Connect the current node to the smaller node in list1
+			current.next = list1;
+			list1 = list1.next; // Move to the next node in list1
+		} else {
+			// Connect the current node to the smaller node in list2
+			current.next = list2;
+			list2 = list2.next; // Move to the next node in list2
+		}
+		// Move the current pointer to the last added node
+		current = current.next;
+	}
+
+	// If there are remaining nodes in either list, connect them to the merged list
+	if (list1 !== null) {
+		current.next = list1;
+	} else {
+		current.next = list2;
+	}
+
+	// The merged list starts from the next node of the dummy head
+	return dummyHead.next;
+}
+
+// Example usage:
+const list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+const list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
+
+const mergedList = mergeTwoLists(list1, list2);
+
+// Print the merged list
+let current = mergedList;
+while (current !== null) {
+	console.log(current.val);
+	current = current.next;
+}
+
+
+
 
 
 // Question 2
