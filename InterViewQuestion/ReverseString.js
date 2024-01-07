@@ -16,11 +16,3 @@ function ReverseName(name) {
 	return reversedName
 }
 
-function reverseString(nameString) {
-	const reverseString = (nameString) => nameString.split(").reverse().join(");
-	return reverseString;
-}
-
-
-const nameString = "testing";
-console.log(reverseString(nameString)) 

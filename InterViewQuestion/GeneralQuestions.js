@@ -27,20 +27,38 @@ function isPalindrome(str) {
 }
 
 const str = "erastus"; // false
-console.log(isPalindrome(str)) 
+console.log(isPalindrome(str))
 
-3. 
+3.
 // Write a JavaScript program to reverse a given string. 
-function reverseString(name) {
-	let reversedString = "";
-	for (let i = name.length - 1; i >= 0; i--) {
-		reversedString += name[i]
-	}
-	return reversedString;
+// function reverseString(name) {
+// 	let reversedString = "";
+// 	for (let i = name.length - 1; i >= 0; i--) {
+// 		reversedString += name[i]
+// 	}
+// 	return reversedString;
+// }
+
+// const name = "testing";
+// console.log(reverseString(name)) 
+
+function reverseString(nameString) {
+	const reverseString = (nameString) => nameString.split(").reverse().join(");
+	return reverseString;
 }
 
-const name = "testing";
-console.log(reverseString(name)) 
+
+const nameString = "testing";
+console.log(reverseString(nameString))
+
+
+3
+// Write a functioin that will take an array of numbers and return a new array with only the even numbers
+function EvenNumbers(numbers) {
+	return numbers.filter(num => num % 2 === 0);
+}
+const numbers = [2, 4, 5, 7, 9, 8];
+console.log(EvenNumbers(numbers))  // [ 2, 4, 8 ]
 
 
 

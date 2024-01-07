@@ -143,14 +143,14 @@ function mergeTwoLists(list1, list2) {
 }
 
 // Example usage:
-const list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
-const list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+const list11 = new ListNode(1, new ListNode(2, new ListNode(4)));
+const list21 = new ListNode(1, new ListNode(3, new ListNode(4)));
 
 
-const mergedList = mergeTwoLists(list1, list2);
+const mergedListt = mergeTwoLists(list1, list2);
 
 // Print the merged list
-let current = mergedList;
+let currentt = mergedList;
 while (current !== null) {
 	console.log(current.val);
 	current = current.next;
@@ -167,3 +167,31 @@ while (current !== null) {
 // stock and choosing a different day in the future to sell that stock.
 // Return the maximum profit you can achieve from this transaction.
 // If you cannot achieve any profit, return 0
+
+
+function maxProfit(prices) {
+	if (!prices || prices.length < 2) {
+		return 0;
+	}
+
+	let minPrice = prices[0];
+	let maxProfit = 0;
+
+	for (let i = 1; i < prices.length; i++) {
+		// Calculate potential profit if selling on the current day
+		const potentialProfit = prices[i] - minPrice;
+
+		// Update maximum profit if the potential profit is greater
+		maxProfit = Math.max(maxProfit, potentialProfit);
+
+		// Update minimum price if the current price is lower
+		minPrice = Math.min(minPrice, prices[i]);
+	}
+
+	return maxProfit;
+}
+
+// Example usage:
+const prices = [7, 1, 5, 3, 6, 4];
+const result = maxProfit(prices);
+console.log(result);
