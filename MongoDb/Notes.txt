@@ -1,0 +1,44 @@
+Mongo db is a Nosql document-oriented database that stores data in json-form document and dynamic schemas
+
+what is collection in mongodb
+- is a group of documents that share a similar structure
+
+What is replica set in mongodb
+- a replica set or a group of mongodb servers that store the same data to provide redundancy and high availability.
+
+What is Sharding in mongodb
+- is a method of partitioning data across multiple servers to improve performance and scalability.
+
+What is indexing in mongodb
+- is the process of creating an index on a field in a collection to improve query performance.
+-type of incexing include, single field, compound, multi-key, text and geospatial indexing
+
+What is MapReduce in mongodb
+- is a data processing technique in MongoDb that involves mapping data to a set of key-value pairs, reducing the values based on the keys and aggregating the results. 
+
+What is GridFs in MongoDb
+- is a specification for storing and retrieving large files, such as images and videos.
+
+What is the difference btn a primary key and Secondary key in MongoDb
+- a primary key in MongoDb is a unique identifier for a document, while secondary key is used for indexing and querying data. 
+
+How does MongoDb ensure data consistency?
+- two-phase commit protocol to esnure data consistency in distributed environments
+
+How Does MongoDB handle schema changes 
+- allows felxible schemas, and schema changes can be made withough affecting existing data.
+
+How does mongoDb handle Transactions
+- MongoDB support multi-documents transactions that supports ACID
+
+What is the role of the mongo Shell in MongoDB
+- the mongo shell is a command line interface that allows users to interact with MongoDB and perform administrative tasks
+
+How does MongoDB handle security
+- MongoDB provides several security features, including authentication, authorization, encryption , and auditing.
+
+What is the difference between a join and lookup in MongoDB
+- a join in MongoDB involves combining data from multiple collection, while a lookup involves retrieving related data from another collection. 
+
+How does MongoDB handle data backup and recovery
+- offers backups, point-in-time recovery and incremental backups.
