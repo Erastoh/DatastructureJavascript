@@ -52,6 +52,7 @@ const nameString = "testing";
 console.log(reverseString(nameString))
 
 
+
 3
 // Write a functioin that will take an array of numbers and return a new array with only the even numbers
 function EvenNumbers(numbers) {
@@ -60,5 +61,22 @@ function EvenNumbers(numbers) {
 const numbers = [2, 4, 5, 7, 9, 8];
 console.log(EvenNumbers(numbers))  // [ 2, 4, 8 ]
 
+
+4. 
+// Given a string, write a function to count the occurrences of each character in the string. 
+
+function occurrencesCountInString(str) {
+	const charcount = {};
+
+	for (let char in str){
+		charcount[char] = (charcount[char] || 0) + 1
+
+	}
+
+	return charcount
+
+}
+
+console.log(countCharacterOccurrences("Hello World")); //{ H: 1, e: 1, l: 3, o: 2, ' ': 1, W: 1, r: 1, d: 1 }
 
 
