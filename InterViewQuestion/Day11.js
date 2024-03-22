@@ -14,7 +14,7 @@ function firstBadFunction(n) {
 		let mid = Math.floor((left + right) / 2);
 
 		if (isBadVersion(mid)) {
-			right = mid
+			right = mid;
 		} else {
 			left = mid + 1;
 		}
