@@ -1,2 +1,9 @@
 // Installing the react Native plugin from the market.
 
+1. How is react Native different from reactjs
+Reactjs is derived from react DOM while react native is derived from iteself
+
+2. What is flux
+ 
+ 3. What is the point of reduc
+    used in state management
