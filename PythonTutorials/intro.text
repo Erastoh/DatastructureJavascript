@@ -6,6 +6,8 @@ How to install Python
 Run python3 on terminal to access python.
 Everything in python is an Object
 
+1. Numbers in python
+include, Int and floats
 number in python are accessble via type()... eg type(4)
 
 >>> 1+2
@@ -36,8 +38,11 @@ number in python are accessble via type()... eg type(4)
 >>> savings
 3500
 >>> 
-//String Slicing
 
+
+2. Strings
+
+//String Slicing
 >>> greet = 'hello'
 >>> greet
 'hello'
@@ -47,3 +52,7 @@ number in python are accessble via type()... eg type(4)
 'l'
 >>> greet[2:-1]
 'll'
+
+//Strings Concatenation 
+
+join any strings using a plus sign. 

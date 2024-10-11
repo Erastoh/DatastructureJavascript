@@ -4,7 +4,6 @@ Installing the apt
 
 //sudo apt install ptyhon3-pip -y
 
-
 Installing the Flask Library
 
 sudo pip3 install flask
