@@ -56,3 +56,14 @@ number in python are accessble via type()... eg type(4)
 //Strings Concatenation 
 
 join any strings using a plus sign. 
+
+3. List 
+1800
+>>> fib1 = [1,2,4,5,6,7,8]
+>>> fib1[5]
+>>> fib1[0:4]
+[1, 2, 4, 5]
+>>> fib2 = [21,34,55]
+>>> fib1+fib2
+[1, 2, 4, 5, 6, 7, 8, 21, 34, 55]
+>>> 
