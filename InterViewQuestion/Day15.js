@@ -20,4 +20,4 @@ function addBinary(a, b) {
 }
 
 // Example usage:
-console.log(addBinary("11", "1")); // Output: "100"
+console.log(addBinary("101", "103")); // Output: "100"
