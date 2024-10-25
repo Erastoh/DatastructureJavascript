@@ -18,3 +18,10 @@ fib(5);
 // 	return recursivefibonacci(n - 1) + recursivefibonacci(n - 2)
 // }
 // console.log(recursivefibonacci(10))
+
+
+const fib = function (n) {
+	const arr = [0, 1];
+
+	
+}
