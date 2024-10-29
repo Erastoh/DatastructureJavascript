@@ -8,7 +8,7 @@
 
 
 //Brute Force solution
-function maxProfit(prices) {
+function maxProfit1(prices) {
 	let globalProfit = 0;
 	for (let i = 0; i < prices.length - 1; i++){
 		for (let j = i + 1; j < prices.length; j++){
@@ -21,7 +21,7 @@ function maxProfit(prices) {
 	return globalProfit;
 }
 
-console.log(maxProfit([7, 6, 4, 3, 1]));
+// console.log(maxProfit1([7, 6, 4, 3, 1]));
 
 //Greedy Algorithmns
 
@@ -30,8 +30,17 @@ const maxProfit = function (prices) {
 	let profit = 0;
 
 	for (let i = 1; i < prices.length; i++){
+		if (prices[i] < minStockPurchasePrice) {
+
+			minStockPurchasePrice = prices[i];
+		}
+
+		profit = Math.max(profit, prices[i] - minStockPurchasePrice);
 		
 	}
 
+	return profit;
 
 }
+
+console.log(maxProfit([7, 1, 5, 3, 6, 4]));
