@@ -36,6 +36,7 @@ const maxProfit = function (prices) {
 		}
 
 		profit = Math.max(profit, prices[i] - minStockPurchasePrice);
+		console.log(minStockPurchasePrice, prices[i], profit, i)
 		
 	}
 
