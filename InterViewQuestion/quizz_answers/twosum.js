@@ -24,4 +24,16 @@ const twosum2 = function (nums, target) {
 	}
 }
 
-console.log(twosum2([2, 1, 6, 8, 4], 9));
+console.log(twosum2([2, 10, 6,1, 8, 4], 9));
+
+
+const twoSUM = (nums, target) => {
+	let storage = {};
+
+	for (let [index, num] of nums.entries()) {
+		if (storage[num] !== undefined) return [storage[num], index];
+		 storage[target - num] = index;
+	}
+}
+
+console.log(twoSUM([2, 10, 6, 1, 8, 4], 9));
