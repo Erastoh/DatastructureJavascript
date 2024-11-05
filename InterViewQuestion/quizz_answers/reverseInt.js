@@ -1,10 +1,21 @@
 
 
-const revInt = function (num) {
-	
-	let reversedint = '';
-	for (let i = num.length - 1; i >= 0; i++) {
-		reversedint += num[i];
-	}
-	return reversedint;
-}
+// const revInt = function (num) {
+// 	let newnum = num.toString();
+// 	let reversedint = '';
+// 	for (let i = newnum.length - 1; i >= 0; i++) {
+// 		reversedint += newnum[i];
+// 	}
+// 	return parseInt(reversedint);
+// }
+
+// console.log(revInt(123));
+
+var reverse = function (x) {
+	if (x < 0) return -1 * reverse(-x);
+
+	return parseInt((x + "").toString().split("").reverse().join(""));
+};
+
+console.log(reverse(-123));
+
