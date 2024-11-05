@@ -1,5 +1,5 @@
-const reverName = prompt("Enter the String Name") // Erastus Mugambi
-
+// const reverName = prompt("Enter the String Name") // Erastus Mugambi
+const reverName = "Erastus Mugambi";
 if (reverName === null || reverName === '') {
 	console.log("Please Enter the String")
 }
@@ -20,8 +20,10 @@ function ReverseName(name) {
 const reverseString = function (name) {
 	let revString = '';
 
-	for (let i = name.length - 1; i <= 0; i--) {
+	for (let i = name.length - 1; i >= 0; i--) {
 		revString += name[i];
 	}
 	return revString;
 }
+
+console.log(reverseString("erastus")); //sutsare
