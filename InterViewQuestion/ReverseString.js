@@ -16,3 +16,12 @@ function ReverseName(name) {
 	return reversedName
 }
 
+
+const reverseString = function (name) {
+	let revString = '';
+
+	for (let i = name.length - 1; i <= 0; i--) {
+		revString += name[i];
+	}
+	return revString;
+}

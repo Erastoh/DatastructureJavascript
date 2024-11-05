@@ -32,8 +32,9 @@ const twoSUM = (nums, target) => {
 
 	for (let [index, num] of nums.entries()) {
 		if (storage[num] !== undefined) return [storage[num], index];
+		console.log(storage);
 		 storage[target - num] = index;
 	}
 }
 
-console.log(twoSUM([2, 10, 6, 1, 8, 4], 9));
+console.log(twoSUM([2, 10, 1, 6, 8, 4], 9));
