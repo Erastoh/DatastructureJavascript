@@ -11,11 +11,16 @@
 
 // console.log(revInt(123));
 
-var reverse = function (x) {
+var reverse1 = function (x) {
 	if (x < 0) return -1 * reverse(-x);
-
 	return parseInt((x + "").toString().split("").reverse().join(""));
 };
 
-console.log(reverse(-123));
+var reverse = function (x) {
+	if (x < 0) return -1 * reverse(-x);
+	const solution = (x + "").split("").reverse().join("");
+	return parseInt((solution > Math.pow(2, 31) - 1) ? 0 : solution);
+};
+
+console.log(reverse(123));
 
