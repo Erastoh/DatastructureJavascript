@@ -1,0 +1,9 @@
+1. JavaScript Values
+The JavaScript syntax defines two types of values:
+Fixed values - Fixed values are called Literals.
+Variable values - Variable values are called Variables.
+
+2. Variable
+Variables are containers for storing values.
+
+
