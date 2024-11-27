@@ -29,9 +29,12 @@ const decodeString = function (s) {
 		} else if (char === ']') {
 
 			solution = repeatStr.pop() + solution.repeat(multipy.pop()); // 
+		
 		} else {
 			solution += char; // ''+ a + c
 		}
 	}
 	return solution;
 };
+
+console.log(decodeString("3[a]2[bc]"));
