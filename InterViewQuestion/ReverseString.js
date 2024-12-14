@@ -27,3 +27,13 @@ const reverseString = function (name) {
 }
 
 console.log(reverseString("erastus")); //sutsare
+
+
+const reverseStringName = function (name) {
+	let revString = '';
+
+	for (let i = name.length - 1; i >= 0; i--){
+		revString += name[i];
+	}
+	return revString;
+}

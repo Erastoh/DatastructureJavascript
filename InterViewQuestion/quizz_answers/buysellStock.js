@@ -31,17 +31,13 @@ const maxProfit = function (prices) {
 
 	for (let i = 1; i < prices.length; i++){
 		if (prices[i] < minStockPurchasePrice) {
-
 			minStockPurchasePrice = prices[i];
 		}
-
 		profit = Math.max(profit, prices[i] - minStockPurchasePrice);
 		console.log(minStockPurchasePrice, prices[i], profit, i)
 		
 	}
-
 	return profit;
-
 }
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));

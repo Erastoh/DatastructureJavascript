@@ -6,4 +6,12 @@ Variable values - Variable values are called Variables.
 2. Variable
 Variables are containers for storing values.
 
+3. Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
 
