@@ -2,7 +2,11 @@
 //Note : The solution set must not contain duplicates tripplets. 
 
 
-const ThreeSum = function (nums) {
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var threeSum = function (nums) {
 	let [solution, left, right] = [[], 0, nums.length - 1];
 	if (nums.length < 3) return solution;
 	nums.sort((a, b) => { return a - b });
@@ -10,9 +14,9 @@ const ThreeSum = function (nums) {
 	for (let [index, number] of nums.entries()) {
 		if (number > 0) return solution;
 		if (number === nums[index - 1]) continue;
-    //  number = -4
+		//  number = -4
 		left = index + 1;
-		right = nums.lenght - 1;
+		right = nums.length - 1;
 		let temp = 0;
 
 		while (left < right) {
