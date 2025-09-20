@@ -1,0 +1,27 @@
+Stages Of ARtificial Inteligence
+1, Artificial Narrow Inteligence(weak AI) - involves applying Aio only to specific tasks
+2. Artificial General Intelligence(strong AI) - has the ability to perform any intellectual task that a human being can.
+3. Artificial Super Intelligence(ASI) - capability of  computers will surpass human. 
+
+
+Programming Languages
+1. python
+2. R - used for anylizing
+3. Java
+4. lisp
+5. prolog
+6. c++
+
+Interview Questions
+1. Explain overfitting and underfitting with examples
+- overfitting is when the module learns the data too well, it capture noice and irrelevasnt details
+- underfitting is when the module is too simple and fails to capture the underlying in the data.
+
+2. What is a confusion matrix and how is it used in evaluating models
+- is a table that helps evaluate how well a classification model is performing
+
+3. Define Cross-Validation
+- cross-validation is a method used in machine learning to test how well a model will perform on unseen data.
+
+4. What is the role of precision and recall in evaluating a model
+- 
