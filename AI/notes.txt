@@ -24,4 +24,5 @@ Interview Questions
 - cross-validation is a method used in machine learning to test how well a model will perform on unseen data.
 
 4. What is the role of precision and recall in evaluating a model
+- precision measures the accuracy of positive predictions
 - 
